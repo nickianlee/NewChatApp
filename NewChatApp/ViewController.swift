@@ -18,7 +18,7 @@ class ViewController: UIViewController {
     
     var friends : [Friend] = []
     
-    var lastId : Int = 20170407
+    var lastId : Int = 201701
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,8 +29,10 @@ class ViewController: UIViewController {
         
         nameTableView.dataSource = self
         
-        listenToFirebase()
         loadData()
+        
+        listenToFirebase()
+      
         
     }
     
@@ -59,7 +61,7 @@ class ViewController: UIViewController {
     }
     
     func addFriendToArray(id : Any, friendInfo : NSDictionary) {
-        if let phoneNumber = friendInfo["phoneNumber"] as? Int16,
+        if let phoneNumber = friendInfo["phoneNumber"] as? String,
             let name = friendInfo["name"] as? String,
             
             let friendId = id as? String,
@@ -87,6 +89,10 @@ class ViewController: UIViewController {
             
             if let lastFriend = self.friends.last {
                 self.lastId = lastFriend.id
+            }
+            
+            if self.friends.count == 0{
+                return
             }
             
             let index = IndexPath(item: self.friends.count - 1, section: 0)
@@ -138,7 +144,8 @@ extension ViewController : UITableViewDelegate, UITableViewDataSource {
         
         let currentStoryboard = UIStoryboard(name: "Main",bundle: Bundle.main)
         if let targetViewController = currentStoryboard.instantiateViewController(withIdentifier: "ChatViewController") as? ChatViewController {
-            
+            targetViewController.senderId = ""
+            targetViewController.senderDisplayName = ""
             navigationController?.pushViewController(targetViewController, animated: true)
         }
     }

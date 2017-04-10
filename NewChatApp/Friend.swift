@@ -14,16 +14,16 @@ class Friend {
     
     var id : Int
     var name : String
-    var phoneNumber : Int16
+    var phoneNumber : String
     
     init () {
         
         id = 0
         name = ""
-        phoneNumber = 0
+        phoneNumber = ""
         
     }
-    init (anId : Int, aName : String, aPhoneNumber : Int16) {
+    init (anId : Int, aName : String, aPhoneNumber : String) {
         
         id = anId
         name = aName
