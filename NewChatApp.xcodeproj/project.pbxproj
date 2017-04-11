@@ -19,6 +19,8 @@
 		7A5929501E9B44C2007FED09 /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A59294F1E9B44C2007FED09 /* ChatViewController.swift */; };
 		7A5929521E9B563B007FED09 /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A5929511E9B563B007FED09 /* Message.swift */; };
 		7A5929541E9B57E3007FED09 /* MessageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A5929531E9B57E3007FED09 /* MessageTableViewCell.swift */; };
+		7A59295C1E9C9DDE007FED09 /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A59295B1E9C9DDE007FED09 /* LogInViewController.swift */; };
+		7A59295E1E9C9DEC007FED09 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A59295D1E9C9DEC007FED09 /* SignUpViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +38,8 @@
 		7A59294F1E9B44C2007FED09 /* ChatViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
 		7A5929511E9B563B007FED09 /* Message.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
 		7A5929531E9B57E3007FED09 /* MessageTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessageTableViewCell.swift; sourceTree = "<group>"; };
+		7A59295B1E9C9DDE007FED09 /* LogInViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogInViewController.swift; sourceTree = "<group>"; };
+		7A59295D1E9C9DEC007FED09 /* SignUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		D31CABC02EFA677F7E690F3F /* Pods-NewChatApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NewChatApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-NewChatApp/Pods-NewChatApp.debug.xcconfig"; sourceTree = "<group>"; };
 		F09A9856E05D38CC806407B6 /* Pods-NewChatApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NewChatApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-NewChatApp/Pods-NewChatApp.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -98,6 +102,8 @@
 				7A5929511E9B563B007FED09 /* Message.swift */,
 				7A59294B1E9B42DA007FED09 /* Friend.swift */,
 				7A59293B1E9B3C91007FED09 /* Main.storyboard */,
+				7A59295D1E9C9DEC007FED09 /* SignUpViewController.swift */,
+				7A59295B1E9C9DDE007FED09 /* LogInViewController.swift */,
 				7A59293E1E9B3C91007FED09 /* Assets.xcassets */,
 				7A5929401E9B3C91007FED09 /* LaunchScreen.storyboard */,
 				7A5929431E9B3C91007FED09 /* Info.plist */,
@@ -234,7 +240,9 @@
 				7A59294C1E9B42DA007FED09 /* Friend.swift in Sources */,
 				7A59293A1E9B3C91007FED09 /* ViewController.swift in Sources */,
 				7A59294E1E9B4393007FED09 /* NameTableViewCell.swift in Sources */,
+				7A59295C1E9C9DDE007FED09 /* LogInViewController.swift in Sources */,
 				7A5929521E9B563B007FED09 /* Message.swift in Sources */,
+				7A59295E1E9C9DEC007FED09 /* SignUpViewController.swift in Sources */,
 				7A5929501E9B44C2007FED09 /* ChatViewController.swift in Sources */,
 				7A5929381E9B3C91007FED09 /* AppDelegate.swift in Sources */,
 			);

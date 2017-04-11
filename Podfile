@@ -8,5 +8,8 @@ target 'NewChatApp' do
   # Pods for NewChatApp
     pod ‘Firebase/Core’
     pod ‘Firebase/Database’
+    pod 'Firebase/Auth'
+    pod 'Firebase/Storage'
     pod ‘JSQMessagesViewController’
+    
 end

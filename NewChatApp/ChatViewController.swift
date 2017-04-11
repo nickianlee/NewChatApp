@@ -8,6 +8,7 @@
 
 import UIKit
 import FirebaseDatabase
+import FirebaseAuth
 import JSQMessagesViewController
 
 
@@ -25,29 +26,32 @@ class ChatViewController: JSQMessagesViewController {
     var messages = [JSQMessage]()
     private var messageRef: FIRDatabaseReference!
     private var newMessageRefHandle: FIRDatabaseHandle?
+    private var usersTypingQuery: FIRDatabaseQuery?
+    private lazy var userIsTypingRef: FIRDatabaseReference = self.messageRef.child("typingIndicator").child(self.senderId)
+    private var localTyping = false
+    var isTyping: Bool{
+        get{
+            return localTyping
+        }
+        set {
+            localTyping = newValue
+            userIsTypingRef.setValue(newValue)
+        }
+    }
     
     
-//    private lazy var userIsTypingRef: FIRDatabaseReference = self.messageRef.child("typingIndicator")
-//    private var localTyping = false
-//    var isTyping: Bool{
-//        get{
-//            return localTyping
-//        }
-//        set {
-//        localTyping = newValue
-//            userIsTypingRef.setValue(newValue)
-//        }
-//    }
-//    
-//    
-//    override func viewDidAppear(_ animated: Bool) {
-//        super.viewDidAppear(animated)
-//        observeTyping()
-//    }
-
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        observeTyping()
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+       // self.senderId = FIRAuth.currentUser?.uid
         messageRef = FIRDatabase.database().reference().child("messages")
+        usersTypingQuery = self.messageRef!.child("typingIndicator").queryOrderedByValue().queryEqual(toValue:true)
+        
+        
         collectionView!.collectionViewLayout.incomingAvatarViewSize = CGSize.zero
         collectionView!.collectionViewLayout.outgoingAvatarViewSize = CGSize.zero
         
@@ -78,38 +82,48 @@ class ChatViewController: JSQMessagesViewController {
         }
     }
     
-        private func observeMessages(){
-    
-            let messageQuery = messageRef.queryLimited(toLast:25)
-    
-            newMessageRefHandle = messageQuery.observe(.childAdded, with: {(snapshot) -> Void in
-    
-                let messageInfo = snapshot.value as! Dictionary<String, Any>
-                guard let messageData = messageInfo as? [String:String] else {
-                    return
-                }
+    private func observeMessages(){
+        
+        let messageQuery = messageRef.queryLimited(toLast:25)
+        
+        newMessageRefHandle = messageQuery.observe(.childAdded, with: {(snapshot) -> Void in
+            
+            let messageInfo = snapshot.value as! Dictionary<String, Any>
+            guard let messageData = messageInfo as? [String:String] else {
+                return
+            }
+            
+            if let id = messageData["senderId"] as String!,
+                let name = messageData["senderName"] as String!,
+                let text = messageData["text"] as String!, text.characters.count > 0 {
                 
-                if let id = messageData["senderId"] as String!,
-                    let name = messageData["senderName"] as String!,
-                    let text = messageData["text"] as String!, text.characters.count > 0 {
-                    
-                    self.addMessage(withId: id, name: name, text: text)
-                    
-                    self.finishReceivingMessage()
+                self.addMessage(withId: id, name: name, text: text)
                 
-                }else {
-                    print("Error! Could not decode message data")
-                }
-            })
+                self.finishReceivingMessage()
+                
+            }else {
+                print("Error! Could not decode message data")
+            }
+        })
+    }
+    
+    private func observeTyping() {
+        
+        let typingIndicatorRef = messageRef.child("typingIndicator")
+        userIsTypingRef = typingIndicatorRef.child(senderId)
+        userIsTypingRef.onDisconnectRemoveValue()
+        
+        
+        usersTypingQuery?.observe(.value) { (data:FIRDataSnapshot) in
+            if data.childrenCount == 1 && self.isTyping{
+                return
+            }
+        
+            self.showTypingIndicator = data.childrenCount > 0
+            self.scrollToBottom(animated: true)
+            
         }
-    
-//    private func observeTyping() {
-//        
-//        let typingIndicatorRef = messageRef.child("typingIndicator")
-//        userIsTypingRef = typingIndicatorRef.child(senderId)
-//        userIsTypingRef.onDisconnectRemoveValue()
-//    
-//    }
+    }
     
     
     //MARK override func
@@ -161,15 +175,15 @@ class ChatViewController: JSQMessagesViewController {
         JSQSystemSoundPlayer.jsq_playMessageSentSound()
         
         finishSendingMessage()
-//        isTyping = false
+        isTyping = false
     }
     
     
-//    override func textViewDidChange(_ textView: UITextView) {
-//        super.textViewDidChange(textView)
-//        
-//            isTyping = textView.text != ""
-//    }
+    override func textViewDidChange(_ textView: UITextView) {
+        super.textViewDidChange(textView)
+        
+        isTyping = textView.text != ""
+    }
     
     
     
