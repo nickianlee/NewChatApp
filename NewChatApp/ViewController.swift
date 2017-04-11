@@ -30,7 +30,7 @@ class ViewController: UIViewController {
         
         nameTableView.dataSource = self
         
-        loadData()
+//        loadData()
         
         listenToFirebase()
       
@@ -92,12 +92,9 @@ class ViewController: UIViewController {
                 self.lastId = lastFriend.id
             }
             
-            if self.friends.count == 0{
-                return
-            }
-            
-            let index = IndexPath(item: self.friends.count - 1, section: 0)
-            self.nameTableView.insertRows(at: [index], with: .left)
+            self.nameTableView.reloadData()
+//            let index = IndexPath(item: self.friends.count - 1, section: 0)
+//            self.nameTableView.insertRows(at: [index], with: .left)
             
         })
         ref.child("friend").observe(.childChanged, with: { (snapshot) in

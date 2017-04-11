@@ -76,11 +76,8 @@ class SignUpViewController: UIViewController {
     }
     
     @IBAction func backButtonTapped(_ sender: Any) {
-        
-        if let logInVC = storyboard?.instantiateViewController(withIdentifier: "LogInViewController") {
             
-            present(logInVC, animated: true, completion: nil)
-        }
+           let _ = self.navigationController?.popViewController(animated: true)
     }
     
 }
