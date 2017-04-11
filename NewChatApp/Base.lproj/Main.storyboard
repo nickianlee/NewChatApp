@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16C68" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="nWn-lx-eH3">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="nWn-lx-eH3">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -9,10 +9,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Log In View Controller-->
         <scene sceneID="siy-XU-2v9">
             <objects>
-                <viewController id="4fS-RB-iPT" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="LogInViewController" id="4fS-RB-iPT" customClass="LogInViewController" customModule="NewChatApp" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="eqh-9v-hw1"/>
                         <viewControllerLayoutGuide type="bottom" id="D4P-X9-OUN"/>
@@ -54,10 +54,10 @@
             </objects>
             <point key="canvasLocation" x="1893.5999999999999" y="-675.11244377811101"/>
         </scene>
-        <!--View Controller-->
+        <!--Sign Up View Controller-->
         <scene sceneID="zRu-3a-xCY">
             <objects>
-                <viewController id="1TM-bh-jTC" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SignUpViewController" id="1TM-bh-jTC" customClass="SignUpViewController" customModule="NewChatApp" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="72J-lj-Lm0"/>
                         <viewControllerLayoutGuide type="bottom" id="6S8-kQ-ZsG"/>
