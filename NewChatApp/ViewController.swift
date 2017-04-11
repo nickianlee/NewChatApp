@@ -9,6 +9,7 @@
 import UIKit
 import UIKit
 import FirebaseDatabase
+import FirebaseAuth
 
 class ViewController: UIViewController {
     
@@ -119,6 +120,24 @@ class ViewController: UIViewController {
             }
             
         })
+    }
+    
+    
+    @IBAction func logoutButtonTap(_ sender: Any) {
+        
+        let firebaseAuth = FIRAuth.auth()
+        do {
+            try firebaseAuth?.signOut()
+            
+            if let logInVC = storyboard?.instantiateViewController(withIdentifier: "AuthNavigationController") {
+                
+                present (logInVC, animated: true, completion: nil)
+            }
+            
+        } catch let signOutError as NSError {
+            print("Error signing out : %@", signOutError)
+        }
+        
     }
 }
 

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16C68" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="nWn-lx-eH3">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="nWn-lx-eH3">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -176,7 +176,13 @@
                             <constraint firstItem="Jbt-uF-6Pb" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="wbg-56-XHs"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="Npf-Jn-7PL"/>
+                    <navigationItem key="navigationItem" id="Npf-Jn-7PL">
+                        <barButtonItem key="rightBarButtonItem" title="Logout" id="EeM-kT-tc7">
+                            <connections>
+                                <action selector="logoutButtonTap:" destination="BYZ-38-t0r" id="6xz-09-5kg"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="nameTableView" destination="Jbt-uF-6Pb" id="5mq-Rp-ISF"/>
                     </connections>
@@ -206,7 +212,7 @@
         <!--Navigation Controller-->
         <scene sceneID="ftx-Cu-Nif">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="nWn-lx-eH3" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="MainNavigationController" automaticallyAdjustsScrollViewInsets="NO" id="nWn-lx-eH3" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="3lc-Zt-sjH">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>

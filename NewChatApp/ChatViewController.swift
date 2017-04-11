@@ -50,7 +50,7 @@ class ChatViewController: JSQMessagesViewController {
        // self.senderId = FIRAuth.currentUser?.uid
         messageRef = FIRDatabase.database().reference().child("messages")
         usersTypingQuery = self.messageRef!.child("typingIndicator").queryOrderedByValue().queryEqual(toValue:true)
-        
+        self.senderId = FIRAuth.auth()?.currentUser?.uid
         
         collectionView!.collectionViewLayout.incomingAvatarViewSize = CGSize.zero
         collectionView!.collectionViewLayout.outgoingAvatarViewSize = CGSize.zero
@@ -110,7 +110,7 @@ class ChatViewController: JSQMessagesViewController {
     private func observeTyping() {
         
         let typingIndicatorRef = messageRef.child("typingIndicator")
-        userIsTypingRef = typingIndicatorRef.child("201701")
+        userIsTypingRef = typingIndicatorRef.child(senderId)
         userIsTypingRef.onDisconnectRemoveValue()
         
         
