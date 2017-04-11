@@ -110,7 +110,7 @@ class ChatViewController: JSQMessagesViewController {
     private func observeTyping() {
         
         let typingIndicatorRef = messageRef.child("typingIndicator")
-        userIsTypingRef = typingIndicatorRef.child(senderId)
+        userIsTypingRef = typingIndicatorRef.child("201701")
         userIsTypingRef.onDisconnectRemoveValue()
         
         
