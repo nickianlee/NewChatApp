@@ -27,7 +27,7 @@ class ChatViewController: JSQMessagesViewController {
     private var newMessageRefHandle: FIRDatabaseHandle?
     
     
-//    private lazy var userIsTypingRef: FIRDatabaseReference = self.messageRef.child("typingIndicator")
+//    private lazy var userIsTypingRef: FIRDatabaseReference = self.messageRef.child("typingIndicator").child(self.senderId)
 //    private var localTyping = false
 //    var isTyping: Bool{
 //        get{
