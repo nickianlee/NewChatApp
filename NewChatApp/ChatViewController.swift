@@ -25,6 +25,25 @@ class ChatViewController: JSQMessagesViewController {
     var messages = [JSQMessage]()
     private var messageRef: FIRDatabaseReference!
     private var newMessageRefHandle: FIRDatabaseHandle?
+    
+    
+//    private lazy var userIsTypingRef: FIRDatabaseReference = self.messageRef.child("typingIndicator")
+//    private var localTyping = false
+//    var isTyping: Bool{
+//        get{
+//            return localTyping
+//        }
+//        set {
+//        localTyping = newValue
+//            userIsTypingRef.setValue(newValue)
+//        }
+//    }
+//    
+//    
+//    override func viewDidAppear(_ animated: Bool) {
+//        super.viewDidAppear(animated)
+//        observeTyping()
+//    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -84,6 +103,14 @@ class ChatViewController: JSQMessagesViewController {
             })
         }
     
+//    private func observeTyping() {
+//        
+//        let typingIndicatorRef = messageRef.child("typingIndicator")
+//        userIsTypingRef = typingIndicatorRef.child(senderId)
+//        userIsTypingRef.onDisconnectRemoveValue()
+//    
+//    }
+    
     
     //MARK override func
     override func collectionView(_ collectionView: JSQMessagesCollectionView!, messageDataForItemAt indexPath:IndexPath!) -> JSQMessageData!{
@@ -134,10 +161,15 @@ class ChatViewController: JSQMessagesViewController {
         JSQSystemSoundPlayer.jsq_playMessageSentSound()
         
         finishSendingMessage()
+//        isTyping = false
     }
     
     
-    
+//    override func textViewDidChange(_ textView: UITextView) {
+//        super.textViewDidChange(textView)
+//        
+//            isTyping = textView.text != ""
+//    }
     
     
     
