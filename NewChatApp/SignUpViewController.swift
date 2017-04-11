@@ -7,29 +7,81 @@
 //
 
 import UIKit
+import FirebaseAuth
+import FirebaseDatabase
 
 class SignUpViewController: UIViewController {
+    
+    @IBOutlet weak var emailTextField: UITextField!
+    
+    @IBOutlet weak var passwordTextField: UITextField!
+    
+    @IBOutlet weak var confirmPasswordTextField: UITextField!
+    
+    var ref : FIRDatabaseReference!
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        
+        ref = FIRDatabase.database().reference()
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    @IBAction func signUpButtonTapped(_ sender: Any) {
+        
+        guard let email = emailTextField.text,
+        let password = passwordTextField.text,
+        let confirmPassword = confirmPasswordTextField.text
+            else {return}
+        
+        if email == "" || password == "" {
+            
+            print("Email Or Password Cannot Be Empty")
+            return
+        }
+        
+        if password != confirmPassword {
+            
+            print("Password Does Not Match")
+            return
+        }
+        
+        FIRAuth.auth()?.createUser(withEmail: email, password: password)
+        {
+            (user, error) in
+            
+            if let err = error {
+                
+                print("Sign Up Error : \(err.localizedDescription)")
+                return
+            }
+            guard let user = user
+                else {
+                    
+                print("User Not Found Error")
+                    return
+            }
+            
+            print("New User Created")
+            print("Email : \(user.email)")
+            print("uid : \(user.uid)")
+            
+            let dict : [String : Any] = ["name" : "ARandomName", "age" : 20]
+            self.ref.child("friend").child(user.uid).setValue(dict)
+            let _ = self.navigationController?.popViewController(animated: true)
+        }
     }
-    */
-
+    
+    @IBAction func backButtonTapped(_ sender: Any) {
+        
+        if let logInVC = storyboard?.instantiateViewController(withIdentifier: "LogInViewController") {
+            
+            present(logInVC, animated: true, completion: nil)
+        }
+    }
+    
 }
+
