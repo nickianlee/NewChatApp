@@ -14,18 +14,21 @@ import FirebaseStorage
 import SwiftGifOrigin
 import JSQMessagesViewController
 
-
-
-//var friendName: Friend?{
-//didSet{
-//    title = friendName?.name
+//protocol ChatViewControllerDelegate {
+//    func didCancel()
 //}
-//}
-
-
 
 class ChatViewController: JSQMessagesViewController {
     
+    override var hidesBottomBarWhenPushed: Bool {
+        get {
+            return navigationController?.topViewController == self
+        }
+        set {
+            super.hidesBottomBarWhenPushed = newValue
+        }
+    }
+//    var delegate: ChatViewControllerDelegate?
     var messages = [JSQMessage]()
     private var messageRef: FIRDatabaseReference!
     private var newMessageRefHandle: FIRDatabaseHandle?
@@ -35,7 +38,7 @@ class ChatViewController: JSQMessagesViewController {
     private var photoMessageMap = [String: JSQPhotoMediaItem]()
     private var updateMessageRefHandle: FIRDatabaseHandle?
     
-    
+  
     private var localTyping = false
     var isTyping: Bool{
         get{
@@ -47,8 +50,6 @@ class ChatViewController: JSQMessagesViewController {
         }
     }
     
-    
-    
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         observeTyping()
@@ -56,7 +57,8 @@ class ChatViewController: JSQMessagesViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // self.senderId = FIRAuth.currentUser?.uid
+        
+        
         messageRef = FIRDatabase.database().reference().child("messages")
         usersTypingQuery = self.messageRef!.child("typingIndicator").queryOrderedByValue().queryEqual(toValue:true)
         self.senderId = FIRAuth.auth()?.currentUser?.uid
@@ -65,6 +67,7 @@ class ChatViewController: JSQMessagesViewController {
         collectionView!.collectionViewLayout.outgoingAvatarViewSize = CGSize.zero
         
         observeMessages()
+        
         
     }
     
@@ -318,9 +321,6 @@ class ChatViewController: JSQMessagesViewController {
         present(picker, animated: true, completion:nil)
     }
     
-    
-    
-    
 }
 // MARK - imagePicker delegate
 
@@ -384,4 +384,5 @@ extension ChatViewController: UIImagePickerControllerDelegate , UINavigationCont
             picker.dismiss(animated: true, completion:nil)
         }
     }
+
 }

@@ -22,6 +22,8 @@ class LogInViewController: UIViewController {
         if let currentUser = FIRAuth.auth()?.currentUser {
             
             print("Another User Already Logged In")
+            
+            self.directToMainNaviController()
         }
     }
     

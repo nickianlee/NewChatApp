@@ -29,6 +29,8 @@ class ProfileViewController: UIViewController {
         
     }()
     
+    var dummyArray :[[String:Any]] = [["name":"Nick"],
+                                      ["name":"Sergio"]]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -56,6 +58,12 @@ extension ProfileViewController: UITableViewDelegate , UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: ProfileCell.cellIdentifier) as?
             ProfileCell else { return UITableViewCell()}
+        
+        let dictionary = dummyArray[indexPath.row]
+        
+        
+        let name = dictionary["name"] as? String
+        cell.labelProfileName.text = name
         
         return cell
     }

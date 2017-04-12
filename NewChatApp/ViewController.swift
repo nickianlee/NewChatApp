@@ -162,7 +162,16 @@ extension ViewController : UITableViewDelegate, UITableViewDataSource {
         if let targetViewController = currentStoryboard.instantiateViewController(withIdentifier: "ChatViewController") as? ChatViewController {
             targetViewController.senderId = ""
             targetViewController.senderDisplayName = ""
-            navigationController?.pushViewController(targetViewController, animated: true)
+            
+//present(targetViewController, animated: true, completion: nil)
+          navigationController?.pushViewController(targetViewController, animated: true)
+//            targetViewController.hidesBottomBarWhenPushed = true
         }
     }
 }
+
+//extension ViewController: ChatViewControllerDelegate {
+//    func didCancel() {
+//        dismiss(animated: true, completion: nil)
+//    }
+//}
