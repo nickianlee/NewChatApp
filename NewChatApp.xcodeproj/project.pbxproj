@@ -21,25 +21,31 @@
 		7A5929541E9B57E3007FED09 /* MessageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A5929531E9B57E3007FED09 /* MessageTableViewCell.swift */; };
 		7A59295C1E9C9DDE007FED09 /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A59295B1E9C9DDE007FED09 /* LogInViewController.swift */; };
 		7A59295E1E9C9DEC007FED09 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A59295D1E9C9DEC007FED09 /* SignUpViewController.swift */; };
+		7A5929861E9E0416007FED09 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A5929851E9E0416007FED09 /* ProfileViewController.swift */; };
+		7A59298F1E9E0B67007FED09 /* ProfileCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A59298D1E9E0B67007FED09 /* ProfileCell.swift */; };
+		7A5929901E9E0B67007FED09 /* ProfileCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7A59298E1E9E0B67007FED09 /* ProfileCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		003991AC63BC368529E2D496 /* Pods_NewChatApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NewChatApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7A5929341E9B3C90007FED09 /* NewChatApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NewChatApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7A5929371E9B3C91007FED09 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		7A5929391E9B3C91007FED09 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		7A5929391E9B3C91007FED09 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ViewController.swift; path = NewChatApp/ViewController.swift; sourceTree = "<group>"; };
 		7A59293C1E9B3C91007FED09 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		7A59293E1E9B3C91007FED09 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7A5929411E9B3C91007FED09 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7A5929431E9B3C91007FED09 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7A5929491E9B3E02007FED09 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
-		7A59294B1E9B42DA007FED09 /* Friend.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Friend.swift; sourceTree = "<group>"; };
-		7A59294D1E9B4393007FED09 /* NameTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NameTableViewCell.swift; sourceTree = "<group>"; };
-		7A59294F1E9B44C2007FED09 /* ChatViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
-		7A5929511E9B563B007FED09 /* Message.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
-		7A5929531E9B57E3007FED09 /* MessageTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessageTableViewCell.swift; sourceTree = "<group>"; };
-		7A59295B1E9C9DDE007FED09 /* LogInViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogInViewController.swift; sourceTree = "<group>"; };
-		7A59295D1E9C9DEC007FED09 /* SignUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		7A59294B1E9B42DA007FED09 /* Friend.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Friend.swift; path = NewChatApp/Friend.swift; sourceTree = "<group>"; };
+		7A59294D1E9B4393007FED09 /* NameTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NameTableViewCell.swift; path = NewChatApp/NameTableViewCell.swift; sourceTree = "<group>"; };
+		7A59294F1E9B44C2007FED09 /* ChatViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ChatViewController.swift; path = NewChatApp/ChatViewController.swift; sourceTree = "<group>"; };
+		7A5929511E9B563B007FED09 /* Message.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Message.swift; path = NewChatApp/Message.swift; sourceTree = "<group>"; };
+		7A5929531E9B57E3007FED09 /* MessageTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MessageTableViewCell.swift; path = NewChatApp/MessageTableViewCell.swift; sourceTree = "<group>"; };
+		7A59295B1E9C9DDE007FED09 /* LogInViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LogInViewController.swift; path = NewChatApp/LogInViewController.swift; sourceTree = "<group>"; };
+		7A59295D1E9C9DEC007FED09 /* SignUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SignUpViewController.swift; path = NewChatApp/SignUpViewController.swift; sourceTree = "<group>"; };
+		7A5929851E9E0416007FED09 /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ProfileViewController.swift; path = NewChatApp/ProfileViewController.swift; sourceTree = "<group>"; };
+		7A59298D1E9E0B67007FED09 /* ProfileCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileCell.swift; sourceTree = "<group>"; };
+		7A59298E1E9E0B67007FED09 /* ProfileCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ProfileCell.xib; sourceTree = "<group>"; };
 		D31CABC02EFA677F7E690F3F /* Pods-NewChatApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NewChatApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-NewChatApp/Pods-NewChatApp.debug.xcconfig"; sourceTree = "<group>"; };
 		F09A9856E05D38CC806407B6 /* Pods-NewChatApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NewChatApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-NewChatApp/Pods-NewChatApp.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -76,6 +82,9 @@
 		7A59292B1E9B3C90007FED09 = {
 			isa = PBXGroup;
 			children = (
+				7A59298A1E9E078D007FED09 /* Class */,
+				7A5929891E9E076C007FED09 /* Cell's */,
+				7A5929881E9E075B007FED09 /* ViewController */,
 				7A5929361E9B3C90007FED09 /* NewChatApp */,
 				7A5929351E9B3C90007FED09 /* Products */,
 				32FA338F1E0C95EE3256F8A1 /* Pods */,
@@ -95,21 +104,45 @@
 			isa = PBXGroup;
 			children = (
 				7A5929371E9B3C91007FED09 /* AppDelegate.swift */,
-				7A59294D1E9B4393007FED09 /* NameTableViewCell.swift */,
-				7A5929391E9B3C91007FED09 /* ViewController.swift */,
-				7A59294F1E9B44C2007FED09 /* ChatViewController.swift */,
-				7A5929531E9B57E3007FED09 /* MessageTableViewCell.swift */,
-				7A5929511E9B563B007FED09 /* Message.swift */,
-				7A59294B1E9B42DA007FED09 /* Friend.swift */,
 				7A59293B1E9B3C91007FED09 /* Main.storyboard */,
-				7A59295D1E9C9DEC007FED09 /* SignUpViewController.swift */,
-				7A59295B1E9C9DDE007FED09 /* LogInViewController.swift */,
+				7A59298D1E9E0B67007FED09 /* ProfileCell.swift */,
+				7A59298E1E9E0B67007FED09 /* ProfileCell.xib */,
 				7A59293E1E9B3C91007FED09 /* Assets.xcassets */,
 				7A5929401E9B3C91007FED09 /* LaunchScreen.storyboard */,
 				7A5929431E9B3C91007FED09 /* Info.plist */,
 				7A5929491E9B3E02007FED09 /* GoogleService-Info.plist */,
 			);
 			path = NewChatApp;
+			sourceTree = "<group>";
+		};
+		7A5929881E9E075B007FED09 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				7A5929391E9B3C91007FED09 /* ViewController.swift */,
+				7A59294F1E9B44C2007FED09 /* ChatViewController.swift */,
+				7A5929851E9E0416007FED09 /* ProfileViewController.swift */,
+				7A59295D1E9C9DEC007FED09 /* SignUpViewController.swift */,
+				7A59295B1E9C9DDE007FED09 /* LogInViewController.swift */,
+			);
+			name = ViewController;
+			sourceTree = "<group>";
+		};
+		7A5929891E9E076C007FED09 /* Cell's */ = {
+			isa = PBXGroup;
+			children = (
+				7A59294D1E9B4393007FED09 /* NameTableViewCell.swift */,
+				7A5929531E9B57E3007FED09 /* MessageTableViewCell.swift */,
+			);
+			name = "Cell's";
+			sourceTree = "<group>";
+		};
+		7A59298A1E9E078D007FED09 /* Class */ = {
+			isa = PBXGroup;
+			children = (
+				7A5929511E9B563B007FED09 /* Message.swift */,
+				7A59294B1E9B42DA007FED09 /* Friend.swift */,
+			);
+			name = Class;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -178,6 +211,7 @@
 				7A59294A1E9B3E02007FED09 /* GoogleService-Info.plist in Resources */,
 				7A59293F1E9B3C91007FED09 /* Assets.xcassets in Resources */,
 				7A59293D1E9B3C91007FED09 /* Main.storyboard in Resources */,
+				7A5929901E9E0B67007FED09 /* ProfileCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -238,6 +272,8 @@
 			files = (
 				7A5929541E9B57E3007FED09 /* MessageTableViewCell.swift in Sources */,
 				7A59294C1E9B42DA007FED09 /* Friend.swift in Sources */,
+				7A5929861E9E0416007FED09 /* ProfileViewController.swift in Sources */,
+				7A59298F1E9E0B67007FED09 /* ProfileCell.swift in Sources */,
 				7A59293A1E9B3C91007FED09 /* ViewController.swift in Sources */,
 				7A59294E1E9B4393007FED09 /* NameTableViewCell.swift in Sources */,
 				7A59295C1E9C9DDE007FED09 /* LogInViewController.swift in Sources */,

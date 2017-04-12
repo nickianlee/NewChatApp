@@ -11,5 +11,6 @@ target 'NewChatApp' do
     pod 'Firebase/Auth'
     pod 'Firebase/Storage'
     pod ‘JSQMessagesViewController’
+    pod 'SwiftGifOrigin'
     
 end
