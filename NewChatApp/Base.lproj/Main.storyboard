@@ -261,6 +261,12 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Profile" id="hnc-Vr-aDj"/>
+                    <connections>
+                        <outlet property="nameTextField" destination="N1Y-mz-FDd" id="ZXB-Jh-ieY"/>
+                        <outlet property="phoneNumTextField" destination="0bK-c7-F53" id="gJ0-j7-Rsb"/>
+                        <outlet property="profileImageView" destination="VmO-YF-4zm" id="DCO-oc-IZ4"/>
+                        <outlet property="statusTextField" destination="dw5-Su-URC" id="f9c-iV-6T9"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3vz-24-brL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
