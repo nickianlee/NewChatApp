@@ -22,8 +22,6 @@
 		7A59295C1E9C9DDE007FED09 /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A59295B1E9C9DDE007FED09 /* LogInViewController.swift */; };
 		7A59295E1E9C9DEC007FED09 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A59295D1E9C9DEC007FED09 /* SignUpViewController.swift */; };
 		7A5929861E9E0416007FED09 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A5929851E9E0416007FED09 /* ProfileViewController.swift */; };
-		7A59298F1E9E0B67007FED09 /* ProfileCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A59298D1E9E0B67007FED09 /* ProfileCell.swift */; };
-		7A5929901E9E0B67007FED09 /* ProfileCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7A59298E1E9E0B67007FED09 /* ProfileCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,8 +42,6 @@
 		7A59295B1E9C9DDE007FED09 /* LogInViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LogInViewController.swift; path = NewChatApp/LogInViewController.swift; sourceTree = "<group>"; };
 		7A59295D1E9C9DEC007FED09 /* SignUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SignUpViewController.swift; path = NewChatApp/SignUpViewController.swift; sourceTree = "<group>"; };
 		7A5929851E9E0416007FED09 /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ProfileViewController.swift; path = NewChatApp/ProfileViewController.swift; sourceTree = "<group>"; };
-		7A59298D1E9E0B67007FED09 /* ProfileCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileCell.swift; sourceTree = "<group>"; };
-		7A59298E1E9E0B67007FED09 /* ProfileCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ProfileCell.xib; sourceTree = "<group>"; };
 		D31CABC02EFA677F7E690F3F /* Pods-NewChatApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NewChatApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-NewChatApp/Pods-NewChatApp.debug.xcconfig"; sourceTree = "<group>"; };
 		F09A9856E05D38CC806407B6 /* Pods-NewChatApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NewChatApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-NewChatApp/Pods-NewChatApp.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -105,8 +101,6 @@
 			children = (
 				7A5929371E9B3C91007FED09 /* AppDelegate.swift */,
 				7A59293B1E9B3C91007FED09 /* Main.storyboard */,
-				7A59298D1E9E0B67007FED09 /* ProfileCell.swift */,
-				7A59298E1E9E0B67007FED09 /* ProfileCell.xib */,
 				7A59293E1E9B3C91007FED09 /* Assets.xcassets */,
 				7A5929401E9B3C91007FED09 /* LaunchScreen.storyboard */,
 				7A5929431E9B3C91007FED09 /* Info.plist */,
@@ -158,6 +152,7 @@
 				7A5929321E9B3C90007FED09 /* Resources */,
 				D3F0E03583E9618AFBF8F146 /* [CP] Embed Pods Frameworks */,
 				0BC9DF520DBC849A6365E539 /* [CP] Copy Pods Resources */,
+				7A47786A1EA06F3E008CDD76 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -212,7 +207,6 @@
 				7A59294A1E9B3E02007FED09 /* GoogleService-Info.plist in Resources */,
 				7A59293F1E9B3C91007FED09 /* Assets.xcassets in Resources */,
 				7A59293D1E9B3C91007FED09 /* Main.storyboard in Resources */,
-				7A5929901E9E0B67007FED09 /* ProfileCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -233,6 +227,19 @@
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-NewChatApp/Pods-NewChatApp-resources.sh\"\n";
 			showEnvVarsInLog = 0;
+		};
+		7A47786A1EA06F3E008CDD76 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Fabric/run\" 3c9cab1e03c62ab72de741fe0c829a093b6ca14f 77cb1bb8a8214671c417e20997043ddc5c60809bf1c3f1e2f33ef6072f8789b6";
 		};
 		D3F0E03583E9618AFBF8F146 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -274,7 +281,6 @@
 				7A5929541E9B57E3007FED09 /* MessageTableViewCell.swift in Sources */,
 				7A59294C1E9B42DA007FED09 /* Friend.swift in Sources */,
 				7A5929861E9E0416007FED09 /* ProfileViewController.swift in Sources */,
-				7A59298F1E9E0B67007FED09 /* ProfileCell.swift in Sources */,
 				7A59293A1E9B3C91007FED09 /* ViewController.swift in Sources */,
 				7A59294E1E9B4393007FED09 /* NameTableViewCell.swift in Sources */,
 				7A59295C1E9C9DDE007FED09 /* LogInViewController.swift in Sources */,
@@ -422,14 +428,14 @@
 			baseConfigurationReference = F09A9856E05D38CC806407B6 /* Pods-NewChatApp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = ZQ547JDPVM;
 				INFOPLIST_FILE = NewChatApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.example.NewChatApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "9e02f0a7-7f6d-491c-a754-731afdc77b02";
-				PROVISIONING_PROFILE_SPECIFIER = "NewChatApp - AppStore";
+				PROVISIONING_PROFILE = "c78c05e1-63d7-4792-b2e2-12788913f5aa";
+				PROVISIONING_PROFILE_SPECIFIER = "NewChatApp - Dev";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;

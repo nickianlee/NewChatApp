@@ -13,5 +13,7 @@ target 'NewChatApp' do
     pod 'Firebase/Messaging'
     pod 'JSQMessagesViewController'
     pod 'SwiftGifOrigin'
+    pod 'Fabric'
+    pod 'Crashlytics'
     
 end
