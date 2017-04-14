@@ -180,7 +180,8 @@
 				TargetAttributes = {
 					7A5929331E9B3C90007FED09 = {
 						CreatedOnToolsVersion = 8.2.1;
-						ProvisioningStyle = Automatic;
+						DevelopmentTeam = ZQ547JDPVM;
+						ProvisioningStyle = Manual;
 					};
 				};
 			};
@@ -404,10 +405,14 @@
 			baseConfigurationReference = D31CABC02EFA677F7E690F3F /* Pods-NewChatApp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = ZQ547JDPVM;
 				INFOPLIST_FILE = NewChatApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.example.NewChatApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "c78c05e1-63d7-4792-b2e2-12788913f5aa";
+				PROVISIONING_PROFILE_SPECIFIER = "NewChatApp - Dev";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -417,10 +422,14 @@
 			baseConfigurationReference = F09A9856E05D38CC806407B6 /* Pods-NewChatApp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
+				DEVELOPMENT_TEAM = ZQ547JDPVM;
 				INFOPLIST_FILE = NewChatApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.example.NewChatApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "9e02f0a7-7f6d-491c-a754-731afdc77b02";
+				PROVISIONING_PROFILE_SPECIFIER = "NewChatApp - AppStore";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;

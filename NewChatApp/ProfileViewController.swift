@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import FirebaseDatabase
 
 class ProfileViewController: UIViewController {
     
@@ -22,15 +23,19 @@ class ProfileViewController: UIViewController {
         _tableView.dataSource = self
         _tableView.delegate = self
         
-        _tableView.estimatedRowHeight = 82.0
+        _tableView.estimatedRowHeight = 64.0
         _tableView.rowHeight = UITableViewAutomaticDimension
         
         return _tableView
         
     }()
     
+    
+    
     var dummyArray :[[String:Any]] = [["name":"Nick"],
                                       ["name":"Sergio"]]
+    
+    //var profileArray: [[String:Any]] = [["name":"\()"]]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -51,7 +56,7 @@ extension ProfileViewController: UITableViewDelegate , UITableViewDataSource {
     
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 0
+        return self.dummyArray.count
     }
     
     

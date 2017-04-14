@@ -146,7 +146,7 @@
                                         <rect key="frame" x="0.0" y="28" width="375" height="120"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="agY-YA-oLv" id="uie-hZ-n9P">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="119"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="119.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="y3U-8p-G8A">
@@ -215,7 +215,7 @@
             </objects>
             <point key="canvasLocation" x="2850.4000000000001" y="38.23088455772114"/>
         </scene>
-        <!--Item-->
+        <!--Profile-->
         <scene sceneID="VC3-D3-1CD">
             <objects>
                 <viewController storyboardIdentifier="ProfileViewController" id="LV5-pZ-HWp" customClass="ProfileViewController" customModule="NewChatApp" customModuleProvider="target" sceneMemberID="viewController">
@@ -228,7 +228,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="hnc-Vr-aDj"/>
+                    <tabBarItem key="tabBarItem" title="Profile" id="hnc-Vr-aDj"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3vz-24-brL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -278,6 +278,7 @@
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="pqw-tc-7Qo"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" id="nZ4-Pi-ne8">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     </tabBar>
@@ -290,11 +291,11 @@
             </objects>
             <point key="canvasLocation" x="972" y="37"/>
         </scene>
-        <!--Item-->
+        <!--Chat's-->
         <scene sceneID="7yL-Lb-xdU">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="eL5-hS-bW9" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="YWq-29-pFb"/>
+                    <tabBarItem key="tabBarItem" title="Chat's" id="YWq-29-pFb"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="fuK-LH-RF7">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>

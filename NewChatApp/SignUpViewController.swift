@@ -69,7 +69,7 @@ class SignUpViewController: UIViewController {
             print("Email : \(user.email)")
             print("uid : \(user.uid)")
             
-            let dict : [String : Any] = ["name" : "ARandomName", "age" : 20]
+            let dict : [String : Any] = ["Email" : "\(user.email)", "UID" : "\(user.uid)"]
             self.ref.child("friend").child(user.uid).setValue(dict)
             let _ = self.navigationController?.popViewController(animated: true)
         }

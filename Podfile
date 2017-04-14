@@ -6,11 +6,12 @@ target 'NewChatApp' do
   use_frameworks!
 
   # Pods for NewChatApp
-    pod ‘Firebase/Core’
-    pod ‘Firebase/Database’
+    pod 'Firebase/Core'
+    pod 'Firebase/Database'
     pod 'Firebase/Auth'
     pod 'Firebase/Storage'
-    pod ‘JSQMessagesViewController’
+    pod 'Firebase/Messaging'
+    pod 'JSQMessagesViewController'
     pod 'SwiftGifOrigin'
     
 end
